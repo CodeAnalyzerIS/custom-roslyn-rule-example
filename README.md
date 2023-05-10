@@ -53,6 +53,7 @@ After you have done these configurations, you can build the project but make sur
 
 Once the files were generated, go to the directory where they were generated and copy them all.  
 Then paste the files in the plugin folder which is specified by the configuration file (more information on that can be found here: https://github.com/CodeAnalyzerIS/code-analyzer-tool/wiki/Configuration)  
+  
 Our example for the directory structure was:  
 rootOfRepository/CAT/Roslyn/rules/LicenseCheck/
   
