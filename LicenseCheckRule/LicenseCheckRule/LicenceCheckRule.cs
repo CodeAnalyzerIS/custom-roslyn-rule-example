@@ -2,14 +2,14 @@
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.Diagnostics;
-using RoslynPlugin_API;
+using RoslynPlugin.API;
 
 namespace LicenseCheckRule;
 
 [DiagnosticAnalyzer(LanguageNames.CSharp)]
 public class LicenceCheckRule : RoslynRule
 {
-    public sealed override string DiagnosticId => "LicenseCheck";
+    public sealed override string RuleName => "LicenseCheck";
     public sealed override DiagnosticSeverity Severity { get; set; }
     public sealed override Dictionary<string, string> Options { get; set; }
     public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; }
@@ -30,7 +30,7 @@ public class LicenceCheckRule : RoslynRule
     {
         Options = new Dictionary<string, string>();
         Severity = DiagnosticSeverity.Info;
-        _rule = new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, Severity,
+        _rule = new DiagnosticDescriptor(RuleName, Title, MessageFormat, Category, Severity,
             isEnabledByDefault: true, description: Description);
         SupportedDiagnostics = ImmutableArray.Create(_rule);
     }
