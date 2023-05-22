@@ -15,7 +15,7 @@ We added 3 new properties to the `RoslynRule` class that need to be implemented 
 - Severity
 
 All these properties are added for the customization through the config file.  
-The DiagnosticId property indicates which ruleName should be used in the config file to configure and enable the rule.  
+The RuleName property indicates which ruleName should be used in the config file to configure and enable the rule.  
 
 To initialise the Options, Severity, and SupportedDiagnostic properties, we suggest creating a default constructor which initialises these properties.  
 Other than our custom properties, you can follow the DiagnosticAnalyzer guidelines
@@ -58,6 +58,6 @@ Our example for the directory structure was:
 rootOfRepository/CAT/Roslyn/rules/LicenseCheck/
   
 IMPORTANT:  
-Make sure to use the 'rules' folder in the Roslyn plugin folder and then use the name specified in the rule as `DiagnosticId` as foldername for the rule files.  
+Make sure to use the 'rules' folder in the Roslyn plugin folder and then use the name specified in the rule as `RuleName` as foldername for the rule files.  
 
 If you run the tool now, the custom rule should be implemented by the tool.
