@@ -10,7 +10,7 @@ https://www.nuget.org/packages/CodeAnalyzerTool.RoslynPlugin.API
 This nuget package contains an API with an abstract class called `RoslynRule` which should be inherited from in your custom rule class.  
 The abstract `RoslynRule` class inherits from the `DiagnosticAnalyzer` abstract class that is created by the Roslyn API.  
 We added 3 new properties to the `RoslynRule` class that need to be implemented to be compatible with our tool:
-- DiagnosticId
+- RuleName
 - Options
 - Severity
 
