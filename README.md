@@ -25,11 +25,11 @@ Other than our custom properties, you can follow the DiagnosticAnalyzer guidelin
 The first important step is to edit the `.csproj` of the project to allow for the dependencies to be generated as `.dll`'s as well.  
 This can be accomplished by doing the following:  
 Add the following line to the PropertyGroup  
-```
+```xml
 <EnableDynamicLoading>true</EnableDynamicLoading>
 ```
 The PropertyGroup could look something like this:  
-```
+```xml
 <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -39,11 +39,11 @@ The PropertyGroup could look something like this:
 ```
 If you don't want the project to create unnessecary dependencies (which are already implemented in the source code), 
 you can check the source code dependencies and add the following line to the ones that are already available and you don't want to be generated again:  
-```
+```xml
 <ExcludeAssets>runtime</ExcludeAssets>
 ```
 Your package reference could look like this:  
-```
+```xml
 <PackageReference Include="CodeAnalyzerTool.RoslynPlugin.API" Version="0.0.5" >
     <ExcludeAssets>runtime</ExcludeAssets>
 </PackageReference>
