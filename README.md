@@ -4,8 +4,7 @@ In this repository you can find an example for a custom Roslyn Rule which can be
 
 ## How to create your own custom rule?
 
-To create your own custom rule, you have to install the following nuget package to your project:  
-https://www.nuget.org/packages/CodeAnalyzerTool.RoslynPlugin.API  
+To create your own custom rule, you have to install the following [nuget](https://www.nuget.org/packages/CodeAnalyzerTool.RoslynPlugin.API) package to your project:    
 
 This nuget package contains an API with an abstract class called `RoslynRule` which should be inherited from in your custom rule class.  
 The abstract `RoslynRule` class inherits from the `DiagnosticAnalyzer` abstract class that is created by the Roslyn API.  
